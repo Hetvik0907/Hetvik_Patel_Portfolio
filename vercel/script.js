@@ -62,7 +62,7 @@ function sendmail(event) {
   };
 
   emailjs
-    .send("your_service_id", "your_tamplate_id", parms)
+    .send("process.env.service", "process.env.tamplate", parms)
     .then(function (response) {
       console.log("Email sent successfully:", response);
       alert("Your Response Has Been Submitted!"); 
